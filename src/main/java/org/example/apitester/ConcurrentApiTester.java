@@ -379,7 +379,7 @@ public class ConcurrentApiTester {
                 .endpoint("/tasks")
                 .method("POST")
                 //.body("{\"name\": \"John Doe\", \"email\": \"john@example.com\"}")
-                .body("{\"taskId\": \"string\", \"description\": \"Concurrent API Test\", \"severity\": 1, \"assignee\": \"string\", \"storyPoint\": 0}")
+                .body("{\"taskId\": \"string\", \"description\": \"Concurrent API Test\", \"severity\": 1, \"assignee\": \"string\", \"storyPoint\": 1}")
                 .addHeader("X-Custom-Header", "custom-value")
                 .successCriteria(result ->
                         result.statusCode == 201 && result.body.contains("\"success\":true"))
